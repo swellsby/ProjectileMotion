@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectile Motion Simulation</title>
+</head>
+<body>
+    <h1>Projectile Motion Simulation</h1>
+    <form id="simulationForm">
+        <label for="initialVelocity">Initial Velocity (m/s):</label>
+        <input type="number" id="initialVelocity" name="initialVelocity" min="0" max="500" step="0.1" value="50">
+        <br>
+
+        <label for="launchAngle">Launch Angle (degrees):</label>
+        <input type="number" id="launchAngle" required>
+        <br>
+
+        <label for="viewingAxis">Viewing Axis:</label>
+        <select id="viewingAxis" required>
+            <option value="x">X-Axis</option>
+            <option value="y">Y-Axis</option>
+            <option value="z">Z-Axis</option>
+        </select>
+        <br>
+
+        <button type="submit">Run Simulation</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
