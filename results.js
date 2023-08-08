@@ -33,7 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
         <p>Time Taken: ${results.timeTaken.toFixed(2)} seconds</p>
         <p>Maximum Height: ${results.maxHeight.toFixed(2)} meters</p>
         <p>Distance Traveled: ${results.distanceTraveled.toFixed(2)} meters</p>
+        <p><strong>${getViewingAngleStatement(results.viewingAxis)}</strong></p>
       `;
+    }
+    
+    // Function to get the viewing angle statement
+    function getViewingAngleStatement(viewingAxis) {
+      if (viewingAxis === "x") {
+        return "You are viewing the path of the projectile from above.";
+      } else if (viewingAxis === "y") {
+        return "You are viewing the path of the projectile from in front of the ball (the catcher's position).";
+      } else if (viewingAxis === "z") {
+        return "You are viewing the path of the projectile from the z-axis (an observer's position), capturing the motion in both the x and y axes.";
+      } else {
+        return "";
+      }
     }
     
     // Defining the appropriate scale factor
