@@ -39,18 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Function to get the viewing angle statement
     function getViewingAngleStatement(viewingAxis) {
-      if (viewingAxis === "x") {
+        if (viewingAxis === "x") {
         return "You are viewing the path of the projectile from above.";
-      } else if (viewingAxis === "y") {
+        } else if (viewingAxis === "y") {
         return "You are viewing the path of the projectile from in front of the ball (the catcher's position).";
-      } else if (viewingAxis === "z") {
+        } else if (viewingAxis === "z") {
         return "You are viewing the path of the projectile from the z-axis (an observer's position), capturing the motion in both the x and y axes.";
-      } else {
+        } else {
         return "";
-      }
+        }
     }
-    
-    // Defining the appropriate scale factor
+
+  // Defining the appropriate scale factor
     function calculateScaleFactor(distanceTraveled) {
         const scaleFactor = 2 - Math.floor(Math.log10(distanceTraveled));
         return scaleFactor;
